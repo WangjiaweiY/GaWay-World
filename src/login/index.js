@@ -1,6 +1,7 @@
 document.querySelector(".btn").addEventListener("click", ()=> {
     login()
     console.log("登录点击成功")
+    window.location.href = "https://www.baidu.com";
 })
 
 function login() {
