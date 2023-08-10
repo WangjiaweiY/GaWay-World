@@ -1,0 +1,12 @@
+{
+  "name": "fish",
+  "version": "1.0.0",
+  "description": "努力学习前端中...",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

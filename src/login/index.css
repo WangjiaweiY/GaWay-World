@@ -10,7 +10,7 @@ body {
 }
 .container {
     height: 100%;
-    background-image: linear-gradient(to right, #fbc2eb, #a6c1ee);
+    background-image: linear-gradient(to right, #8e25f0, #a6c1ee);
 }
 .login-wrapper {
     background-color: #fff;
@@ -22,8 +22,41 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 20%;
 }
 .header {
+    font-size: 38px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 200px;
+    margin: 0 auto;
+    top: 10%;
+}
+.tixing-container {
+    width: 100%;
+    height: 15%;
+    background-color: lightgreen;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    margin-bottom: 5%;
+    border-radius: 50px;
+    visibility: hidden;
+}
+.tixing {
+    margin: 0 auto;
     font-size: 38px;
     font-weight: bold;
     text-align: center;
@@ -47,7 +80,7 @@ body {
     padding: 10px;
     width: 100%;
     margin-top: 40px;
-    background-image: linear-gradient(to right, #a6c1ee, #fbc2eb);
+    background-image: linear-gradient(to right, #b9a6ee, #9b32e0);
     color: #fff;
     cursor: pointer;
 }
