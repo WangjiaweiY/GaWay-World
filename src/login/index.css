@@ -37,9 +37,12 @@ body {
     height: 20%;
 }
 .icon-yu {
-    color: #8e25f0;
     transform: scale(3);
-    background-color: #a6c1ee;
+    margin-left: 50px;
+    transition: color 0.5s ease;
+}
+.icon-yu:hover {
+    color: #8e25f0;  /* 修改为需要的鼠标悬停时的颜色 */
 }
 .header {
     display: flex;
@@ -48,7 +51,7 @@ body {
     font-weight: bold;
     text-align: center;
     line-height: 200px;
-    margin: 0 auto;
+    margin-left: 120px;
     top: 10%;
 }
 .tixing-container {
@@ -69,15 +72,24 @@ body {
     text-align: center;
     line-height: 200px;
 }
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+}
 .input-item {
-    display: block;
-    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    width: 150%;
     margin-bottom: 20px;
     border: 0;
     padding: 10px;
     border-bottom: 1px solid rgb(128, 125, 125);
     font-size: 15px;
     outline: none;
+    border-radius: 50px;
 }
 .input-item:placeholder {
     text-transform: uppercase;
