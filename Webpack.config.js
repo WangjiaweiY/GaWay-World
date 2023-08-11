@@ -76,7 +76,7 @@ const config = {
     mode: 'development',
     devtool: 'inline-source-map',
     devServer: {
-        static: "./dist"
+        static: "./dist/login"
     },
     stats: {
         children: true
