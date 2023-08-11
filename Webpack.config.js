@@ -2,6 +2,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin")
+const webpack = require('webpack')
 
 const config = {
     entry: {
@@ -39,15 +40,29 @@ const config = {
         new MiniCssExtractPlugin({
             filename: './[name]/index.css'
         }),
+        new webpack.DefinePlugin({
+            // key 是注入到打包后的前端 JS 代码中作为全局变量
+            // value 是变量对应的值（在 corss-env 注入在 node.js 中的环境变量字符串）
+            'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+          })
     ],
     module: { // 加载器
         rules: [
             {
-                test: /\.css$/i,
-                // use: ['style-loader', 'css-loader']
-                use: [MiniCssExtractPlugin.loader, "css-loader"],
+              test: /\.css$/i,
+              // use: ['style-loader', "css-loader"],
+              use: [process.env.NODE_ENV === 'development' ? 'style-loader' : MiniCssExtractPlugin.loader, "css-loader"]
             },
-        ],
+            {
+              test: /\.less$/i,
+              use: [
+                // compiles Less to CSS
+                process.env.NODE_ENV === 'development' ? 'style-loader' : MiniCssExtractPlugin.loader,
+                'css-loader',
+                'less-loader',
+              ],
+            }
+          ],
     },
     optimization: {
         // 最小化
@@ -58,6 +73,13 @@ const config = {
             new CssMinimizerPlugin(),
         ],
     },
-    mode: 'development'
+    mode: 'development',
+    devtool: 'inline-source-map',
+    devServer: {
+        static: "./dist"
+    },
+    stats: {
+        children: true
+    }
 }
 module.exports = config

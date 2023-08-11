@@ -1,1 +1,2 @@
 (()=>{"use strict";console.log("注册模块")})();
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zaWdudXAvaW5kZXguanMiLCJtYXBwaW5ncyI6Im1CQUNBQSxRQUFRQyxJQUFJLE8iLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9maXNoLy4vc3JjL3NpZ251cC9pbmRleC5qcyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgJy4vaW5kZXguY3NzJ1xyXG5jb25zb2xlLmxvZyhcIuazqOWGjOaooeWdl1wiKSJdLCJuYW1lcyI6WyJjb25zb2xlIiwibG9nIl0sInNvdXJjZVJvb3QiOiIifQ==
