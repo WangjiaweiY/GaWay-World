@@ -1,0 +1,1 @@
+(()=>{"use strict";console.log("注册模块")})();

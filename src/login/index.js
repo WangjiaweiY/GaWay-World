@@ -1,3 +1,5 @@
+import './index.css'
+console.log(__dirname)
 document.querySelector(".btn").addEventListener("click", ()=> {
     login()
 })
