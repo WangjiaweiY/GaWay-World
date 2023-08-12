@@ -1,11 +1,101 @@
 body {
-    background: pink;
-    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 header {
-    background: lightgreen;
-    margin-bottom: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
 }
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+header nav li {
+    display: inline;
+    margin-right: 10px;
+}
+header nav a {
+    color: #fff;
+    text-decoration: none;
+}
+.content {
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+#sidebar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #f0f0f0;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-out;
+}
+.open #sidebar {
+    transform: translateX(0);
+}
+.menu-button {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+}
+.menu-button:hover {
+    background-color: #666;
+}
+
+.Love {
+    margin-top: 20px;
+}
+
 footer {
-    background: lightblue;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
 }
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.custom-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.custom-button:hover {
+    background-color: #0056b3;
+}
+.Love.show-image {
+    display: block;
+}
+  
+.Love {
+    display: none;
+}
+.heart-button {
+    background-color: pink;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}  

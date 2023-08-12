@@ -61,6 +61,13 @@ const config = {
                 'css-loader',
                 'less-loader',
               ],
+            },
+            {
+                test: /\.(png|jpg|jpeg|gif)$/i,
+                type: 'asset',
+                generator: {
+                  filename: 'assets/[hash][ext][query]'
+                }
             }
           ],
     },
