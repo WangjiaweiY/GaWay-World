@@ -77,31 +77,59 @@ body {
     flex-direction: column;
     align-items: center;
     justify-self: center;
+    gap: 20px;
 }
-.input-item {
-    display: flex;
-    align-items: center;
-    justify-self: center;
-    width: 150%;
-    margin-bottom: 20px;
-    border: 0;
+.inputBox {
+    position: relative;
+    width: 100%;
+}
+.inputBox input {
+    width: 100%;
     padding: 10px;
-    border-bottom: 1px solid rgb(128, 125, 125);
-    font-size: 15px;
+    border: 1px solid rgba(255,255,255,0.25);
+    background-color: rgb(240, 181, 252);
+    border-radius: 5px;
     outline: none;
-    border-radius: 50px;
+    color: #fff;
+    font-size: 16px;
 }
-.input-item:placeholder {
+.inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
     text-transform: uppercase;
+    color: rgba(255,255,255,0.25);
+    transition: .5s;
+}
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span {
+    color: lightpink;
+    transform: translateX(10px)
+               translateY(-45px);
+    font-size: 12px;
+    padding: 0 10px;
+    background: rgb(234, 101, 247);
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    letter-spacing: 4px
+}
+.inputBox:nth-child(2) input:valid ~ span,
+.inputBox:nth-child(2) input:focus ~ span {
+    background: rgb(234, 101, 247);
+    color: lightpink;
+    border-radius: 2px;
 }
 .btn {
     text-align: center;
     padding: 10px;
     width: 100%;
     margin-top: 40px;
+    margin-left: 20px;
     background-image: linear-gradient(to right, #b9a6ee, #9b32e0);
     color: #fff;
     cursor: pointer;
+    border-radius: 5px;
 }
 .msg {
     text-align: center;
@@ -109,5 +137,5 @@ body {
 }
 a {
     text-decoration-line: none;
-    color: #abc1ee;
+    color: #c8abee;
 }
