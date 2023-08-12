@@ -26,7 +26,7 @@ header nav a {
     text-align: center;
     position: relative;
 }
-#sidebar {
+.sidebar {
     position: absolute;
     left: 0;
     top: 0;
@@ -35,9 +35,23 @@ header nav a {
     background-color: #f0f0f0;
     transform: translateX(-100%);
     transition: transform 0.3s ease-out;
+    display: none;
 }
-.open #sidebar {
+.sidebar.open {
     transform: translateX(0);
+    display: block;
+}
+.menu-button {
+    display: block;
+}
+.menu-button.hide {
+    display: none;
+}
+.menu-item {
+    /* 添加导航项样式 */
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #ddd;
 }
 .menu-button {
     position: absolute;

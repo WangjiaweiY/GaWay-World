@@ -5,7 +5,10 @@ theImg.src = imgObj
 document.querySelector('.Love').appendChild(theImg)
 function toggleSidebar() {
     var sidebar = document.getElementById("sidebar");
-    sidebar.classList.toggle("open");
+      var menuButton = document.querySelector('.menu-button');
+      
+      sidebar.classList.toggle("open");
+      menuButton.classList.toggle("hide");
 }
 function toggleImage() {
     var loveDiv = document.querySelector('.Love');

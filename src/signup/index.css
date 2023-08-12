@@ -1,3 +1,63 @@
 body {
-    background: pink;
-}
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(-45deg, #ff9494, #ffcb94, #fffa94, #b2ff94, #94ffda, #94d6ff, #949fff, #d894ff);
+    background-size: 300% 300%;
+    animation: gradientAnimation 10s ease infinite;
+  }
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  /* 表单标题样式 */
+  h1 {
+    text-align: center;
+    color: #ff69b4;
+  }
+  /* 表单输入样式 */
+  label {
+    display: block;
+    margin-bottom: 10px;
+    color: #ff69b4;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 200%; /* 设置输入框宽度 */
+    border: 1px solid #ccc;
+    border-radius: 20px;
+  }
+  input[type="submit"] {
+    background-color: #ff69b4;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  input[type="submit"]:hover {
+    background-color: #ff477e;
+  }
+  form {
+      width: 400px; /* 设置表单宽度 */
+    margin: 0 auto; /* 水平居中显示 */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex; /* 使用Flex布局 */
+    flex-direction: column; /* 设置元素在纵向上排列 */
+    align-items: flex-start; /* 左对齐元素 */
+  }

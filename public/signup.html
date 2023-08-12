@@ -1,9 +1,28 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>注册功能尽情期待</title>
-    </head>
-    <body>
-    </body>
+<head>
+  <title>注册页面</title>
+</head>
+<body>
+    <h1>注册</h1>
+    <form>
+        <div class="form-row">
+          <label for="username">用户名:</label>
+          <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-row">
+          <label for="email">邮箱:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-row">
+          <label for="password">密码:</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-row">
+          <label for="confirm-password">确认密码:</label>
+          <input type="password" id="confirm-password" name="confirm-password" required>
+        </div>
+        <input type="submit" value="注册">
+      </form>
+</body>
 </html>
