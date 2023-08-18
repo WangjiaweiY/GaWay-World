@@ -1,115 +1,133 @@
+* {
+    marigin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(#2b1055,#7597de);
+    display: flex;
+    flex-direction: column;
 }
+
 header {
-    background-color: #333;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    padding: 30px 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 2em;
     color: #fff;
-    padding: 20px;
-}
-header nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-header nav li {
-    display: inline;
-    margin-right: 10px;
-}
-header nav a {
-    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 700;
     text-decoration: none;
 }
-.content {
-    padding: 20px;
-    text-align: center;
-    position: relative;
-}
-.sidebar {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 250px;
-    height: 100%;
-    background-color: #f0f0f0;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-out;
-    display: none;
-}
-.sidebar.open {
-    transform: translateX(0);
-    display: block;
-}
-.menu-button {
-    display: block;
-}
-.menu-button.hide {
-    display: none;
-}
-.menu-item {
-    /* 添加导航项样式 */
-    padding: 10px;
-    background-color: #f1f1f1;
-    border-bottom: 1px solid #ddd;
-}
-.menu-button {
-    position: absolute;
-    left: 10px;
-    top: 10px;
-    display: inline-block;
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    cursor: pointer;
-}
-.menu-button:hover {
-    background-color: #666;
-}
 
-.Love {
-    margin-top: 20px;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-.button-container {
+header ul {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    align-items: center;
 }
 
-.custom-button {
-    background-color: #007bff;
+header ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+header ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
     color: #fff;
-    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+header ul li a:hover {
+    background: #fff;
+    color: #2b1055;
+}
+
+.dropdown-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+  
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown > a {
+    display: block;
+    padding: 10px;
     border: none;
-    border-radius: 4px;
-    font-size: 16px;
     cursor: pointer;
 }
-
-.custom-button:hover {
-    background-color: #0056b3;
+  
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    width: 400%; /* 继承父级的宽度 */
+    border-radius: 20px;
 }
-.Love.show-image {
+  
+.dropdown:hover .sub-menu {
     display: block;
 }
   
-.Love {
-    display: none;
+.sub-menu li {
+    padding: 10px;
 }
-.heart-button {
-    background-color: pink;
+  
+.sub-menu a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+}
+  
+.sub-menu a:hover {
+    background-color: #ccc;
+}
+
+.content {
+    flex: 1;
+}
+
+
+  
+footer {
+    padding: 20px;
+    text-align: center;
     color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-}  
+}
+
+footer::before {
+    content: "";
+    display: block;
+    width: 85%;
+    height: 1px;
+    background-color: #ffffff; /* 设置线的颜色 */
+    margin: 0 auto; /* 水平居中 */
+}
+  
+
